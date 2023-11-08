@@ -1,0 +1,13 @@
+.page {
+   background-image: url('../../Utils/landing.jpg');
+   background-position: center;
+   background-size: cover;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   color: #fff;
+   font-family: 'Arial', sans-serif;
+}
