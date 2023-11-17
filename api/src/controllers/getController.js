@@ -50,7 +50,7 @@ const getDbPokemons = async () => {
       const pokemonsDb = pokemonsFound.map((pokemon) => {
          return {
             id: pokemon.id,
-            nombre: pokemon.name,
+            nombre: pokemon.nombre,
             imagen: pokemon.imagen,
             vida: pokemon.vida,
             ataque: pokemon.ataque,

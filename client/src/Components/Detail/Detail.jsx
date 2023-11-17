@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import {searchById} from '../../Redux/actions'
 import { useParams } from 'react-router-dom';
 import { NavBar } from '../NavBar/NavBar';
+import { Link } from 'react-router-dom';
    
 export const Detail = () => {
 
@@ -28,6 +29,9 @@ export const Detail = () => {
          <h3>Altura: {detail?.altura}</h3>
          <h3>Peso: {detail?.peso}</h3>
          <h3>Tipo: {detail?.tipo && detail.tipo.join(', ')}</h3>
+         <Link to={'/home'}>
+         <button>Back to Home</button>
+         </Link>
       </div>
    )
 };

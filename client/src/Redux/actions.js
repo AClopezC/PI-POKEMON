@@ -7,6 +7,8 @@ import {
    FILTER_BY_TYPE,
    FILTER_BY_ORIGIN,
    SORTING,
+   CREATE_POKEMON,
+   CLEAN_DETAIL
 } from './actionTypes.js'
 
 
@@ -117,4 +119,20 @@ export const sorting = (sort) => {
          throw new Error(error.message)
       }
    }
+};
+
+export const createPokemon = (state) => {
+   return async (dispatch) => {
+      try {
+         const { data } = await axios.post('http://localhost:3001/create', state);
+         return dispatch({ type: CREATE_POKEMON, payload: data })
+      } catch (error) {
+         console.log(error);
+         throw new Error(error.message)
+      }
+   }
+};
+
+export const cleanDetail = () => {
+   return { type: CLEAN_DETAIL }
 };

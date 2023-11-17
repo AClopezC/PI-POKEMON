@@ -6,6 +6,8 @@ import {
    FILTER_BY_TYPE,
    FILTER_BY_ORIGIN,
    SORTING,
+   CREATE_POKEMON,
+   CLEAN_DETAIL
 } from './actionTypes';
 
 
@@ -52,6 +54,16 @@ export default function reducer(state = initialState, { type, payload }) {
             ...state,
             pokemons: payload
          };
+      case CREATE_POKEMON:
+         return {
+            ...state,
+            pokemons: [...state.pokemons, payload.pokemon],
+         };
+      case CLEAN_DETAIL:
+         return {
+            ...state,
+            pokemonsDetail: {}
+         }
       default:
          return {
             ...state

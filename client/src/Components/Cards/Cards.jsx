@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Card } from '../Card/Card';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllPokemons, getAllTypes, filterByType, filterByOrigin, sorting } from '../../Redux/actions';
+import { getAllPokemons, getAllTypes, filterByType, filterByOrigin, sorting, cleanDetail } from '../../Redux/actions';
 
 export const Cards = () => {
 
@@ -12,6 +12,7 @@ export const Cards = () => {
    useEffect(() => {
       dispatch(getAllPokemons());
       dispatch(getAllTypes());
+      return () => dispatch(cleanDetail());
    }, [dispatch]);
 
    //*FILTRO POR TEMPERAMENTO.
@@ -80,7 +81,7 @@ export const Cards = () => {
 
    const indexOfLastPokemon = currentPage * pokemonsXpage;
    const indexOfFirstPokemon = indexOfLastPokemon - pokemonsXpage;
-   const currentPokemons = pokemons.slice(indexOfFirstPokemon, indexOfLastPokemon)
+   const currentPokemons = pokemons ? pokemons.slice(indexOfFirstPokemon, indexOfLastPokemon) : [];
 
    return (
       <div>
