@@ -1,30 +1,36 @@
-/* formPage.module.css */
+/* form.module.css */
+
 .div {
-   background-color: #f5f5f5;
+   background-image: url('../../Utils/CREATE.jpg');
+   background-size: cover;
+   background-position: center;
    min-height: 100vh;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    text-align: center;
-   color: #333;
+   color: #fff;
    font-family: 'Arial', sans-serif;
 }
 
 .h1 {
    font-size: 2rem;
-   color: #333;
+   color: #fff;
+   /* Color del texto en blanco */
    margin: 10px 0;
 }
 
 .h3 {
    font-size: 1.5rem;
-   color: #555;
+   color: #fff;
+   /* Color del texto en blanco */
    margin: 10px 0;
 }
 
 .form {
-   background-color: #fff;
+   background-color: rgba(255, 255, 255, 0.8);
+   /* Fondo blanco con opacidad */
    border: 1px solid #ccc;
    border-radius: 15px;
    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -92,5 +98,3 @@ button {
    cursor: pointer;
    margin-left: 5px;
 }
-
-/* Agrega estilos específicos para otros elementos según tus necesidades */

@@ -1,49 +1,66 @@
 /* cards.module.css */
-.cardContainer {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
-}
 
-.cardsHeader {
-   font-size: 2rem;
+.page {
+   background-color: #f5f5f5;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
    color: #333;
-   margin: 20px 0;
+   font-family: 'Arial', sans-serif;
 }
 
-.cardsFilters {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
-   margin-bottom: 20px;
-}
-
-.cardsFilters label {
+.label {
    font-size: 1rem;
-   color: #555;
-   margin-right: 10px;
-}
-
-.cardsFilters select {
+   color: #666;
+   background-color: #f5f5f5;
+   padding: 5px 10px;
    border: 1px solid #ccc;
    border-radius: 5px;
-   padding: 8px;
-   font-size: 1rem;
-   margin: 10px 0;
+   margin-right: 10px;
+   transition: background-color 0.3s;
+   cursor: pointer;
+   font-weight: bold;
 }
 
-.cardsFilters button {
+.button {
    background-color: #3f51b5;
    color: #fff;
    font-size: 1rem;
    border: none;
    padding: 8px 15px;
-   border-radius: 5px;
+   border-radius: 25px;
    cursor: pointer;
+   margin: 5px;
    transition: background-color 0.3s;
+   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
    font-weight: bold;
 }
 
-.cardsFilters button:hover {
-   background-color: #2c387e;
+.button:hover {
+   background-color: #1976d2;
+}
+
+.cards {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
+   padding: 20px;
+   max-width: 1200px;
+   width: 100%;
+   justify-content: center;
+}
+
+.select {
+   margin: 0 10px;
+}
+
+.errorMessage {
+   color: red;
+   font-size: 18px;
+   font-weight: bold;
+   text-align: center;
+   margin-top: 20px;
 }

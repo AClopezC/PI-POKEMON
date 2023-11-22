@@ -2,7 +2,11 @@
    background-image: url('../../Utils/landing.jpg');
    background-position: center;
    background-size: cover;
+   /* O 100% 100% según tus preferencias */
+   background-repeat: no-repeat;
    min-height: 100vh;
+   width: 100%;
+   /* Asegúrate de que ocupe el ancho completo de la pantalla */
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -10,4 +14,37 @@
    text-align: center;
    color: #fff;
    font-family: 'Arial', sans-serif;
+}
+
+.content {
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.message {
+   margin-top: 20px;
+   font-size: 18px;
+   font-style: italic;
+}
+
+h1 {
+   font-size: 48px;
+   margin-bottom: 20px;
+}
+
+button {
+   background-color: #ffcc00;
+   color: #000;
+   font-size: 24px;
+   padding: 10px 20px;
+   border: none;
+   cursor: pointer;
+   text-decoration: none;
+   margin-top: 20px;
+}
+
+button:hover {
+   background-color: #ffdb4d;
 }

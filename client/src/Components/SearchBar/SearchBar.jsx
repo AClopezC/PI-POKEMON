@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { searchByName } from '../../Redux/actions';
+import { getAllPokemons, searchByName } from '../../Redux/actions';
+import style from './searchBar.module.css'
 
 export const SearchBar = () => {
 
@@ -17,13 +18,19 @@ export const SearchBar = () => {
       if (toSearch) {
          dispatch(searchByName(toSearch))
       }
-   }
+   };
+
+   const handleClean = () => {
+      dispatch(getAllPokemons());
+      alert('Pantalla fresca y lista para explorar');
+   };
 
    return (
-      <div>
-         <label>Busca un pokemon por nombre </label>
-         <input onChange={handleChange} type="text" />
-         <button onClick={handleSearchByName}>Search</button>
+      <div className={style.search}>
+         <label className={style.label}>Busca un pokemon por nombre </label>
+         <input className={style.input} onChange={handleChange} type="text" />
+         <button className={style.button} onClick={handleSearchByName}>Search</button>
+         <button className={style.button} onClick={handleClean}>Clean home</button>
       </div>
    )
 };
